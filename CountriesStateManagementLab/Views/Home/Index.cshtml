@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Country>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Geography Class</h1>
+    <p>I have here a robust database of 5 countries for you to learn about. Select from the list below to learn about each country.</p>
+
+
+
+<form method="post">
+    <select name ="CountrySelect">
+
+        @foreach (Country c in Model)
+        {
+            <option value="@c.Name">@c.Name</option>
+        }
+
+    </select><br />
+    <input type="submit" value="Submit" />
+
+</form>
+    
+</div>
